@@ -9,7 +9,8 @@ from dotenv import load_dotenv
 from src.prompt import *
 import os
 
-app = Flask(__name__)
+# app = Flask(__name__) ------- before code ----------
+app = Flask(__name__, template_folder="../templates")  # ✅ Point to the templates folder
 
 load_dotenv()
 
@@ -61,6 +62,6 @@ def chat():
 
 
 
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port= 8080, debug= True)
+# this  IS REMOVED------- before code ----------
+# if __name__ == '__main__':
+#     app.run(host="0.0.0.0", port= 8080, debug= True)

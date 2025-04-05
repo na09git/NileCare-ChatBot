@@ -1,4 +1,6 @@
-system_prompt=(
+
+
+system_prompt = (
     "You are an assistant question-answer task."
     "use the following pieces of retrieved context to answer the question at the end."
     "the question. if you dont know the answer , say that you"
