@@ -1,11 +1,14 @@
 services:
   - type: web
-    name: nilecare-chat-backend
+    name: NileCare-ChatBot
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    runtime: python
+    repo: https://github.com/na09git/NileCare-ChatBot
+    branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
     envVars:
       - key: PINECONE_API_KEY
-        value: your-pinecone-key
+        sync: false
       - key: OPENAI_API_KEY
-        value: your-openai-key
+        sync: false
