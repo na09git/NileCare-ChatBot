@@ -1,14 +1,14 @@
 services:
   - type: web
-    name: NileCare-ChatBot
-    env: python
-    runtime: python
-    repo: https://github.com/na09git/NileCare-ChatBot
-    branch: main
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    name: nilecare-chatbot
     envVars:
-      - key: PINECONE_API_KEY
-        sync: false
       - key: OPENAI_API_KEY
-        sync: false
+        value: your-openai-api-key
+      - key: PINECONE_API_KEY
+        value: your-pinecone-api-key
+    plan: free
+    region: oregon
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: gunicorn app:app
