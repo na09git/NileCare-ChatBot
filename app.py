@@ -10,7 +10,7 @@ from src.prompt import *
 import os
 
 # app = Flask(__name__) ------- before code ----------
-app = Flask(__name__, template_folder="../templates")  # ✅ Point to the templates folder
+app = Flask(__name__, template_folder="templates")  # ✅ Point to the templates folder
 
 load_dotenv()
 
