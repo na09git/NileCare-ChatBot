@@ -8,7 +8,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 from src.prompt import *
 import os
-from app import app as handler  # Vercel looks for "handler"
 
 # app = Flask(__name__) ------- before code ----------
 app = Flask(__name__, template_folder="../templates")  # ✅ Point to the templates folder
