@@ -60,6 +60,9 @@ def chat():
     print("Response : ", response["answer"])
     return str(response["answer"])
 
+@app.route("/healthz")
+def healthz():
+    return "ok", 200
 
 
 # this  IS REMOVED------- before code ----------
